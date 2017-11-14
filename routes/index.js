@@ -54,7 +54,7 @@ router.get('/data/:type/:name/:maxid/:pass', function (req, res, next) {
           }
         }
         else {
-          res.send("noUser");
+          res.send("noUser" + ' ' + body + ' ' + error);
         }
       })
     }
