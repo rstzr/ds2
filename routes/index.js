@@ -43,7 +43,7 @@ router.get('/data/:type/:name/:maxid/:pass', function (req, res, next) {
         reqUri = 'https://www.instagram.com/p/' + req.params.name + '/?__a=1';
       }
 
-      request({ url: reqUri, followAllRedirects: false }, function (error, response, body) {
+      request({url: reqUri, followAllRedirects: false}, function (error, response, body) {
         if (!error && response.statusCode == 200) {
           try {
             var info = JSON.parse(body)
@@ -54,7 +54,7 @@ router.get('/data/:type/:name/:maxid/:pass', function (req, res, next) {
           }
         }
         else {
-          res.send("noUser" + ' ' + body + ' ' + error);
+          res.send("noUser");
         }
       })
     }
