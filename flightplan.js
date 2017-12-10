@@ -1,7 +1,7 @@
 var plan = require('flightplan');
 
 var appName = 'dataService';
-var username = 'root';
+var username = '***';
 
 var startFile = 'bin/www';
 
@@ -9,9 +9,9 @@ var tmpDir = appName+'-' + new Date().getTime();
 
 plan.target('pro', [
   {
-    host: '138.197.220.160',
+    host: '111.111.111.111',
     username: username,
-    password: 'Kaynatas11?',
+    password: '***',
     agent: process.env.SSH_AUTH_SOCK
   },
 //add in another server if you have more than one

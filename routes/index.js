@@ -11,7 +11,7 @@ router.get('/data/:type/:name/:maxid/:pass', function (req, res, next) {
 
   if (req.params.type != null && req.params.name != null && req.params.pass == 'data9') {
 
-    if (req.params.name == 'lexisargeant') {
+    if (req.params.name == 'lexisargeant' || req.params.name == 'maisie_dek') {
       res.send("noUser");
     } else {
 
